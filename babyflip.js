@@ -62,15 +62,14 @@ function Init()
     Loader2.load('carmen_jeffrey_2012_06.jpg');
     Loader3.load('assistant_blogger.jpg');
 
+    // A scene
+    Scene = new THREE.Scene();
+
     // A camera
     Camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
     Camera.position.set(0, 150, 400);
     Camera.lookAt(Scene.position);
-
     //    Camera.position.z = 1000;
-
-    // A scene
-    Scene = new THREE.Scene();
 
     // A floor
     var FloorTexture   = new THREE.ImageUtils.loadTexture('checkerboard.jpg');
