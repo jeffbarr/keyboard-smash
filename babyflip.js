@@ -72,9 +72,9 @@ function Init()
     // A floor
     var FloorTexture   = new THREE.ImageUtils.loadTexture('checkerboard.jpg');
     FloorTexture.wrapS = FloorTexture.wrapT = THREE.RepeatWrapping; 
-    FloorTexture.repeat.set(10, 10);
+    FloorTexture.repeat.set(20, 20);
     var FloorMaterial = new THREE.MeshBasicMaterial({ map: FloorTexture });
-    var FloorGeometry = new THREE.PlaneGeometry(1000, 1000, 1, 1);
+    var FloorGeometry = new THREE.PlaneGeometry(2000, 2000, 1, 1);
 
     var Floor         = new THREE.Mesh(FloorGeometry, FloorMaterial);
     Floor.position.y  = -0.5;
