@@ -69,6 +69,19 @@ function Init()
     // A scene
     Scene = new THREE.Scene();
 
+    // A floor
+    var FloorTexture   = new THREE.ImageUtils.loadTexture('checkerboard.jpg');
+    FloorTexture.wrapS = FloorTexture.wrapT = THREE.RepeatWrapping; 
+    FloorTexture.repeat.set(10, 10);
+    var FloorMaterial = new THREE.MeshBasicMaterial({ map: FloorTexture });
+    var FloorGeometry = new THREE.PlaneGeometry(1000, 1000, 1, 1);
+
+    var Floor         = new THREE.Mesh(FloorGeometry, FloorMaterial);
+    Floor.position.y  = -0.5;
+    Floor.doubleSided = true;
+    scene.add(Floor);
+
+    // A single user-controllable object
     Mesh = GenerateMesh(DefaultCubeSize, DefaultCubeColor);
     Scene.add(Mesh);
 
