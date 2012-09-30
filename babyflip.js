@@ -79,7 +79,7 @@ function Init()
     var Floor         = new THREE.Mesh(FloorGeometry, FloorMaterial);
     Floor.position.y  = -0.5;
     Floor.doubleSided = true;
-    scene.add(Floor);
+    Scene.add(Floor);
 
     // A single user-controllable object
     Mesh = GenerateMesh(DefaultCubeSize, DefaultCubeColor);
