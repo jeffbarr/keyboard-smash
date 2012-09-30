@@ -178,6 +178,12 @@ function OnKeydown(event)
           ReplaceMesh(1.0);
 	  break;
 
+      case 'i':
+      case 'I':
+	  ResetState();
+          ReplaceMesh(1.0);
+	  break;
+
       default:
 	  break;
     }
@@ -230,4 +236,15 @@ function PickNextObject()
     {
 	CurObjectType = 0;
     }
+}
+
+function ResetState()
+{
+    CurTexture      = 0;
+    CurObjectType   = 0;
+    Mesh.CubeSize   = DefaultCubeSize;
+    Mesh.position.x = 0;
+    Mesh.position.y = 0;
+    Mesh.rotation.x = 0;
+    Mesh.rotation.y = 0;
 }
