@@ -64,7 +64,10 @@ function Init()
 
     // A camera
     Camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
-    Camera.position.z = 1000;
+    Camera.position.set(0, 150, 400);
+    Camera.lookAt(Scene.position);
+
+    //    Camera.position.z = 1000;
 
     // A scene
     Scene = new THREE.Scene();
